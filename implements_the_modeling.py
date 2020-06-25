@@ -205,6 +205,13 @@ def main():
     x_test = df_prepared_test.drop("Vote", 1)
     y_test = df_prepared_test["Vote"]
 
+
+    print("x_test is:")
+    print("x_test is:")
+    print("x_test is:")
+
+    print(x_test)
+
     x_train_and_validation = x_train.append(x_validation).reset_index(drop=True)
     y_train_and_validation = y_train.append(y_validation).reset_index(drop=True)
 
