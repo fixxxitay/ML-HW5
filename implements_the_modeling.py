@@ -8,6 +8,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.metrics import plot_confusion_matrix
 from sklearn.linear_model import SGDClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.neural_network import MLPClassifier
 
 transportation_threshold = 0.8
 
@@ -69,10 +70,38 @@ def vote_division(y_pred_test, y_train):
     plt.show()
 
 
+def vote_division_new_test(y_pred_test):
+    pred_values = []
+    for i, label in from_num_to_label.items():
+        result_true = len(y_pred_test[y_pred_test == i])
+        all_results = len(y_pred_test)
+        ratio = (result_true / all_results) * 100
+        pred_values.append(ratio)
+
+    plt.figure(figsize=(5, 5))
+    colors = ["blue", "brown", "green", "grey", "khaki", "orange",
+              "pink", "purple", "red", "turquoise", "violet", "white", "yellow"]
+    explode = [0, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    plt.pie(pred_values, labels=labels, autopct="%.1f%%", explode=explode, colors=colors)
+    plt.title("Test prediction vote division cart")
+    plt.show()
+
+
 def save_voting_predictions(y_test_pred):
     y_test_pred_labels = [from_num_to_label[x] for x in y_test_pred]
     df_y_test_pred_labels = pd.DataFrame(y_test_pred_labels)
     df_y_test_pred_labels.to_csv('test_voting_predictions.csv', index=False)
+
+
+def save_voting_predictions_new_test(y_test_pred, y_indexes):
+    y_test_pred_labels = [from_num_to_label[x] for x in y_test_pred]
+    df_y_test_pred_labels = pd.DataFrame(y_test_pred_labels)
+    tmp = y_indexes.add(1)
+    df_y_test_pred_labels['IdentityCard_Num'] = tmp
+    df_y_test_pred_labels = df_y_test_pred_labels.rename(columns={"0": "PredictVote", "IdentityCard_Num": "IdentityCard_Num"})
+    columns_titles = ["IdentityCard_Num", "PredictVote"]
+    df_y_test_pred_labels = df_y_test_pred_labels.reindex(columns=columns_titles, copy=True)
+    df_y_test_pred_labels.to_csv('new_test_voting_predictions.csv', index=False)
 
 
 def train_some_models(x_train, y_train, x_validation, y_validation):
@@ -152,7 +181,14 @@ def train_some_models(x_train, y_train, x_validation, y_validation):
     acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
     ret.append(("RandomForestClassifier - entropy, min_samples_split=5 min_samples_leaf=2", rf_clf, acc))
 
+    print("MLP")
+    mlp_clf = MLPClassifier(max_iter=1600)
+    mlp_clf.fit(x_train, y_train)
+    acc = print_cross_val_accuracy(mlp_clf, x_validation, y_validation)
+    ret.append(("MLP", mlp_clf, acc))
+
     return ret
+
 
 def calculate_overall_test_error(y_test, y_test_pred):
     overall_test_error = 1 - len(y_test[y_test_pred == y_test]) / len(y_test)
@@ -205,17 +241,10 @@ def main():
     x_test = df_prepared_test.drop("Vote", 1)
     y_test = df_prepared_test["Vote"]
 
-
-    print("x_test is:")
-    print("x_test is:")
-    print("x_test is:")
-
-    print(x_test)
-
     x_train_and_validation = x_train.append(x_validation).reset_index(drop=True)
     y_train_and_validation = y_train.append(y_validation).reset_index(drop=True)
 
-    print("the best score from random forest on train + validation is:")
+    print("the best score from best clf on train + validation is:")
     print_cross_val_accuracy(best_model_clf, x_train_and_validation, y_train_and_validation)
 
     best_model_clf.fit(x_train_and_validation, y_train_and_validation)
@@ -239,9 +268,6 @@ def main():
 
     # overall test error
     calculate_overall_test_error(y_test, y_test_pred)
-
-    # each party would like to suggest transportation services for its voters
-    estimate_transportation(best_model_clf, x_test)
 
 
 if __name__ == '__main__':

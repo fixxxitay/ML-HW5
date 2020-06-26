@@ -189,7 +189,6 @@ def main():
 
     # 3 - Normalization (scaling)
     df_train, df_test, df_validation, df_new_test = normalize(df_test, df_train, df_validation, df_new_test)
-    print(df_new_test)
     # step number 3
     # Save the 3x2 data sets in CSV files
     # CSV files of the prepared train, validation and test data sets

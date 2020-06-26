@@ -232,15 +232,6 @@ def get_clustering_coalition(x_test, x_train, x_validation, y_test, y_train, y_v
     print_variance_after_choose_coalition(coalition_clustering, x_train, y_train)
 
 
-def main():
-    x_test, x_train, x_validation, y_test, y_train, y_validation = load_prepared_data()
-
-    get_clustering_coalition(x_test, x_train, x_validation, y_test, y_train, y_validation)
-    get_generative_coalition(x_test, x_train, x_validation, y_test, y_train, y_validation)
-    get_every_party_lead_feat(x_train, y_train)
-    get_strong_coalition(x_train, y_train, x_test, y_test)
-
-
 def get_strong_coalition(x_train, y_train, x_test, y_test):
     coalition = ['Greens', 'Greys', 'Khakis', 'Oranges', 'Pinks', 'Reds', 'Turquoises', 'Whites', 'Yellows']
     x_backup = x_train.copy()
@@ -328,6 +319,15 @@ def get_generative_coalition(x_test, x_train, x_validation, y_test, y_train, y_v
     test_coalition(x_test, y_test, coal)
 
     print_variance_after_choose_coalition(coal, x_validation, y_validation)
+
+
+def main():
+    x_test, x_train, x_validation, y_test, y_train, y_validation = load_prepared_data()
+
+    get_clustering_coalition(x_test, x_train, x_validation, y_test, y_train, y_validation)
+    get_generative_coalition(x_test, x_train, x_validation, y_test, y_train, y_validation)
+    get_every_party_lead_feat(x_train, y_train)
+    get_strong_coalition(x_train, y_train, x_test, y_test)
 
 
 if __name__ == '__main__':

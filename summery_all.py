@@ -2,7 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import automate_the_model_selection as auto
 from implements_the_modeling import winner_party, vote_division, save_voting_predictions,\
-    plot_confusion_matrix, calculate_overall_test_error, train_some_models, print_cross_val_accuracy
+    plot_confusion_matrix, calculate_overall_test_error, train_some_models,\
+    print_cross_val_accuracy, vote_division_new_test, save_voting_predictions_new_test
 
 
 def main():
@@ -31,7 +32,7 @@ def main():
     best_model_clf = auto.find_best_model(models)
 
     # Load prepared test set
-    df_prepared_test = pd.read_csv("ElectionsData_Pred_Features.csv")
+    df_prepared_test = pd.read_csv("prepared_test.csv")
     # shuffle
     df_prepared_test = df_prepared_test.sample(frac=1).reset_index(drop=True)
     x_test = df_prepared_test.drop("Vote", 1)
@@ -45,6 +46,7 @@ def main():
 
     best_model_clf.fit(x_train_and_validation, y_train_and_validation)
     y_test_pred = best_model_clf.predict(x_test)
+
 
     # Use the selected model to provide the following:
     # vote division
@@ -66,8 +68,37 @@ def main():
     # overall test error
     calculate_overall_test_error(y_test, y_test_pred)
 
+    #########################################################################
+    #########################################################################
+    #########################################################################
+
+    print("lets begin with the new test prediction")
+    # predict the new test set
+    df_prepared_new_test = pd.read_csv("prepared_new_test.csv")
+
+    x_test = df_prepared_new_test.drop("IdentityCard_Num", 1)
+    y_indexes = df_prepared_new_test["IdentityCard_Num"]
+    y_new_test_pred = best_model_clf.predict(x_test)
+
+    # Use the selected model to provide the following:
+    # vote division
+    vote_division_new_test(y_new_test_pred)
+
+    # the party that wins the elections is:
+    print()
+    winner_party(best_model_clf, x_test)
+    print()
+
+    # save
+    # task 3: Predict the vote of each voter in the new sample
+    save_voting_predictions_new_test(y_new_test_pred, y_indexes)
+
     # task 4: What will be a steady coalition – show why
     # coalition will be more stable than other coalitions
+
+    #########################################################################
+    #########################################################################
+    #########################################################################
 
 
 if __name__ == '__main__':
