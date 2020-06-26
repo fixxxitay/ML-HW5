@@ -3,11 +3,15 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from features import *
 
-
 right_feature_set = ["Vote", "Yearly_IncomeK", "Number_of_differnt_parties_voted_for", "Political_interest_Total_Score",
                      "Avg_Satisfaction_with_previous_vote", "Avg_monthly_income_all_years",
                      "Most_Important_Issue", "Overall_happiness_score", "Avg_size_per_room",
                      "Weighted_education_rank"]
+
+new_right_feature_set = ["IdentityCard_Num", "Yearly_IncomeK", "Number_of_differnt_parties_voted_for", "Political_interest_Total_Score",
+                         "Avg_Satisfaction_with_previous_vote", "Avg_monthly_income_all_years",
+                         "Most_Important_Issue", "Overall_happiness_score", "Avg_size_per_room",
+                         "Weighted_education_rank"]
 
 
 def deterministic_split(df, train, test):
@@ -18,10 +22,11 @@ def deterministic_split(df, train, test):
     return df_train, df_test, df_validation
 
 
-def save_files(df_train, df_test, df_validation):
+def save_files(df_train, df_test, df_validation, df_new_test):
     df_train.to_csv('prepared_train.csv', index=False)
     df_validation.to_csv('prepared_validation.csv', index=False)
     df_test.to_csv('prepared_test.csv', index=False)
+    df_new_test.to_csv('prepared_new_test.csv', index=False)
 
 
 def remove_na(df_train, df_test, df_validation):
@@ -38,8 +43,9 @@ def save_raw_data(df_test, df_train, df_validation):
     df_validation.to_csv('raw_validation.csv', index=False)
 
 
-def complete_missing_values(df_train: pd.DataFrame, df_test: pd.DataFrame, df_validation: pd.DataFrame) -> (
-        pd.DataFrame, pd.DataFrame, pd.DataFrame):
+def complete_missing_values(df_train: pd.DataFrame, df_test: pd.DataFrame, df_validation: pd.DataFrame,
+                            df_new_test: pd.DataFrame) -> (
+        pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame):
     df_train = df_train[df_train >= 0]
     df_test = df_test[df_test >= 0]
     df_validation = df_validation[df_validation >= 0]
@@ -62,11 +68,13 @@ def complete_missing_values(df_train: pd.DataFrame, df_test: pd.DataFrame, df_va
         df_train[col].fillna(filler, inplace=True)
         df_test[col].fillna(filler, inplace=True)
         df_validation[col].fillna(filler, inplace=True)
+        df_new_test[col].fillna(filler, inplace=True)
 
-    return df_train, df_test, df_validation
+    return df_train, df_test, df_validation, df_new_test
 
 
-def nominal_to_numerical_categories(df_test: pd.DataFrame, df_train: pd.DataFrame, df_validation: pd.DataFrame):
+def nominal_to_numerical_categories(df_test: pd.DataFrame, df_train: pd.DataFrame, df_validation: pd.DataFrame,
+                                    df_new_test: pd.DataFrame):
     # from nominal to Categorical
     df_train = df_train.apply(lambda x: pd.Categorical(x) if x.dtype != 'float64' else x, axis=0)
     # give number to each Categorical
@@ -82,41 +90,50 @@ def nominal_to_numerical_categories(df_test: pd.DataFrame, df_train: pd.DataFram
     # give number to each Categorical
     df_test = df_test.apply(lambda x: x.cat.codes if x.dtype != 'float64' else x, axis=0)
 
-    return df_test, df_train, df_validation
+    # from nominal to Categorical
+    df_new_test = df_new_test.apply(lambda x: pd.Categorical(x) if x.dtype != 'float64' else x, axis=0)
+    # give number to each Categorical
+    df_new_test = df_new_test.apply(lambda x: x.cat.codes if x.dtype != 'float64' else x, axis=0)
+
+    return df_test, df_train, df_validation, df_new_test
 
 
-def apply_feature_selection(df_train, df_test, df_validation, feature_set):
+def apply_feature_selection(df_train, df_test, df_validation, df_new_test, feature_set):
     df_train = df_train[feature_set]
     df_test = df_test[feature_set]
     df_validation = df_validation[feature_set]
+    df_new_test = df_new_test[new_right_feature_set]
 
-    return df_train, df_test, df_validation
+    return df_train, df_test, df_validation, df_new_test
 
 
-def normalize(df_test: pd.DataFrame, df_train: pd.DataFrame, df_validation: pd.DataFrame):
+def normalize(df_test: pd.DataFrame, df_train: pd.DataFrame, df_validation: pd.DataFrame, df_new_test: pd.DataFrame):
     # min-max for uniform features
-    #uniform_scaler = MinMaxScaler(feature_range=(-1, 1))
-    #df_train[uniform_features_right_features] = uniform_scaler.fit_transform(df_train[uniform_features_right_features])
-    #df_validation[uniform_features_right_features] = uniform_scaler.transform(df_validation[uniform_features_right_features])
-    #df_test[uniform_features_right_features] = uniform_scaler.transform(df_test[uniform_features_right_features])
+    # uniform_scaler = MinMaxScaler(feature_range=(-1, 1))
+    # df_train[uniform_features_right_features] = uniform_scaler.fit_transform(df_train[uniform_features_right_features])
+    # df_validation[uniform_features_right_features] = uniform_scaler.transform(df_validation[uniform_features_right_features])
+    # df_test[uniform_features_right_features] = uniform_scaler.transform(df_test[uniform_features_right_features])
 
     # z-score for normal features
     normal_scaler = StandardScaler()
     df_train[normal_features_right_features] = normal_scaler.fit_transform(df_train[normal_features_right_features])
-    df_validation[normal_features_right_features] = normal_scaler.transform(df_validation[normal_features_right_features])
+    df_validation[normal_features_right_features] = normal_scaler.transform(
+        df_validation[normal_features_right_features])
     df_test[normal_features_right_features] = normal_scaler.transform(df_test[normal_features_right_features])
+    df_new_test[normal_features_right_features] = normal_scaler.transform(df_new_test[normal_features_right_features])
 
-    #quick fix
+    # quick fix
     df_train[["Most_Important_Issue"]] = normal_scaler.fit_transform(df_train[["Most_Important_Issue"]])
     df_validation[["Most_Important_Issue"]] = normal_scaler.transform(df_validation[["Most_Important_Issue"]])
     df_test[["Most_Important_Issue"]] = normal_scaler.transform(df_test[["Most_Important_Issue"]])
+    df_new_test[["Most_Important_Issue"]] = normal_scaler.transform(df_new_test[["Most_Important_Issue"]])
 
     ##now everyone will be between -1 and 1
-    #df_train[normal_features_right_features] = uniform_scaler.fit_transform(df_train[normal_features_right_features])
-    #df_validation[normal_features_right_features] = uniform_scaler.transform(df_validation[normal_features_right_features])
-    #df_test[normal_features_right_features] = uniform_scaler.transform(df_test[normal_features_right_features])
+    # df_train[normal_features_right_features] = uniform_scaler.fit_transform(df_train[normal_features_right_features])
+    # df_validation[normal_features_right_features] = uniform_scaler.transform(df_validation[normal_features_right_features])
+    # df_test[normal_features_right_features] = uniform_scaler.transform(df_test[normal_features_right_features])
 
-    return df_train, df_test, df_validation
+    return df_train, df_test, df_validation, df_new_test
 
 
 def remove_outliers(threshold: float, df_train: pd.DataFrame, df_validation: pd.DataFrame, df_test: pd.DataFrame):
@@ -138,6 +155,10 @@ def main():
     # first part - data preparation
     df = pd.read_csv("ElectionsData.csv")
 
+    # load the new test data
+    df_new_test = pd.read_csv("ElectionsData_Pred_Features.csv")
+    print(df_new_test)
+
     # split the data to train , test and validation
     df_train, df_test, df_validation = deterministic_split(df, 0.6, 0.2)
 
@@ -145,13 +166,17 @@ def main():
     save_raw_data(df_test, df_train, df_validation)
 
     # apply feature selection
-    df_train, df_test, df_validation = apply_feature_selection(df_train, df_test, df_validation, right_feature_set)
+    df_train, df_test, df_validation, df_new_test = apply_feature_selection(df_train, df_test,
+                                                                            df_validation, df_new_test,
+                                                                            right_feature_set)
 
     # Convert nominal types to numerical categories
-    df_test, df_train, df_validation = nominal_to_numerical_categories(df_test, df_train, df_validation)
+    df_test, df_train, df_validation, df_new_test = nominal_to_numerical_categories(df_test, df_train, df_validation,
+                                                                                    df_new_test)
 
     # 1 - Imputation - Complete missing values
-    df_train, df_test, df_validation = complete_missing_values(df_train, df_test, df_validation)
+    df_train, df_test, df_validation, df_new_test = complete_missing_values(df_train, df_test, df_validation,
+                                                                            df_new_test)
 
     # 2 - Data Cleansing
     # Outlier detection using z score
@@ -163,12 +188,12 @@ def main():
     df_train, df_test, df_validation = remove_na(df_train, df_test, df_validation)
 
     # 3 - Normalization (scaling)
-    df_train, df_test, df_validation = normalize(df_test, df_train, df_validation)
-
+    df_train, df_test, df_validation, df_new_test = normalize(df_test, df_train, df_validation, df_new_test)
+    print(df_new_test)
     # step number 3
     # Save the 3x2 data sets in CSV files
     # CSV files of the prepared train, validation and test data sets
-    save_files(df_train, df_test, df_validation)
+    save_files(df_train, df_test, df_validation, df_new_test)
 
 
 if __name__ == '__main__':

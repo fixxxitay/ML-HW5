@@ -10,33 +10,60 @@ right_feature_set = ["Vote", "Yearly_IncomeK", "Number_of_differnt_parties_voted
                      "Weighted_education_rank"]
 
 
+def deterministic_split(df, train, test):
+    df_train = df.iloc[0:round(len(df) * train), :]
+    df_test = df.iloc[round(len(df) * train):round(len(df) * (train + test)), :]
+    df_validation = df.iloc[round(len(df) * (train + test)):len(df), :]
+
+    return df_train, df_test, df_validation
+
+
 def save_files(df_train, df_test, df_validation):
-    df_test.to_csv('prepared_new_test.csv', index=False)
+    df_train.to_csv('prepared_train.csv', index=False)
+    df_validation.to_csv('prepared_validation.csv', index=False)
+    df_test.to_csv('prepared_test.csv', index=False)
 
 
-def remove_na(df_test):
+def remove_na(df_train, df_test, df_validation):
+    df_train = df_train.dropna()
     df_test = df_test.dropna()
+    df_validation = df_validation.dropna()
 
-    return df_test
+    return df_train, df_test, df_validation
 
 
-def complete_missing_values(df_test: pd.DataFrame) -> pd.DataFrame:
+def save_raw_data(df_test, df_train, df_validation):
+    df_train.to_csv('raw_train.csv', index=False)
+    df_test.to_csv('raw_test.csv', index=False)
+    df_validation.to_csv('raw_validation.csv', index=False)
+
+
+def complete_missing_values(df_train: pd.DataFrame, df_test: pd.DataFrame, df_validation: pd.DataFrame) -> (
+        pd.DataFrame, pd.DataFrame, pd.DataFrame):
+    df_train = df_train[df_train >= 0]
     df_test = df_test[df_test >= 0]
+    df_validation = df_validation[df_validation >= 0]
 
-    for col in df_test.columns.values:
+    for col in df_train.columns.values:
+        if col == 'Vote':
+            df_train[col].fillna(df_train[col].mode()[0], inplace=True)
+            continue
+
         filler = None
         if col in nominal_features:
-            filler = df_test[col].mode()[0]
+            filler = df_train[col].mode()[0]
 
         if col in integer_features:
-            filler = round(df_test[col].mean())
+            filler = round(df_train[col].mean())
 
         if col in float_features:
-            filler = df_test[col].mean()
+            filler = df_train[col].mean()
 
+        df_train[col].fillna(filler, inplace=True)
         df_test[col].fillna(filler, inplace=True)
+        df_validation[col].fillna(filler, inplace=True)
 
-    return df_test
+    return df_train, df_test, df_validation
 
 
 def nominal_to_numerical_categories(df_test: pd.DataFrame, df_train: pd.DataFrame, df_validation: pd.DataFrame):
@@ -109,32 +136,39 @@ def remove_outliers(threshold: float, df_train: pd.DataFrame, df_validation: pd.
 
 def main():
     # first part - data preparation
-    df_new_test = pd.read_csv("ElectionsData_Pred_Features.csv")
+    df = pd.read_csv("ElectionsData.csv")
+
+    # split the data to train , test and validation
+    df_train, df_test, df_validation = deterministic_split(df, 0.6, 0.2)
+
+    # Save the raw data first
+    save_raw_data(df_test, df_train, df_validation)
 
     # apply feature selection
-    df_new_test = apply_feature_selection(df_new_test,  right_feature_set)
+    df_train, df_test, df_validation = apply_feature_selection(df_train, df_test, df_validation, right_feature_set)
 
     # Convert nominal types to numerical categories
-    df_new_test = nominal_to_numerical_categories(df_new_test)
+    df_test, df_train, df_validation = nominal_to_numerical_categories(df_test, df_train, df_validation)
 
     # 1 - Imputation - Complete missing values
-    df_new_test = complete_missing_values(df_new_test)
+    df_train, df_test, df_validation = complete_missing_values(df_train, df_test, df_validation)
 
     # 2 - Data Cleansing
     # Outlier detection using z score
 
     threshold = 3  # .3
-    df_new_test = remove_outliers(threshold, df_new_test)
+    df_train, df_validation, df_test = remove_outliers(threshold, df_train, df_validation, df_test)
 
     # Remove lines containing na values
-    df_new_test = remove_na(df_new_test)
+    df_train, df_test, df_validation = remove_na(df_train, df_test, df_validation)
 
     # 3 - Normalization (scaling)
-    df_new_test = normalize(df_new_test)
+    df_train, df_test, df_validation = normalize(df_test, df_train, df_validation)
 
     # step number 3
-    # CSV files of the prepared new test data set
-    save_files(df_new_test)
+    # Save the 3x2 data sets in CSV files
+    # CSV files of the prepared train, validation and test data sets
+    save_files(df_train, df_test, df_validation)
 
 
 if __name__ == '__main__':
