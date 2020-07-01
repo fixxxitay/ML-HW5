@@ -43,7 +43,13 @@ def load_prepared_data():
     df_prepared_test = df_prepared_test.sample(frac=1).reset_index(drop=True)
     x_test = df_prepared_test.drop("Vote", 1)
     y_test = df_prepared_test["Vote"]
-    return x_test, x_train, x_validation, y_test, y_train, y_validation
+
+    # Load prepared test set
+    df_prepared_test = pd.read_csv("prepared_new_test.csv")
+    x_pred = df_prepared_test.drop("IdentityCard_Num", 1)
+    y_pred = df_prepared_test["IdentityCard_Num"]
+
+    return x_test, x_train, x_validation, x_pred, y_test, y_train, y_validation, y_pred
 
 
 def draw_variances(features, variances, title):
@@ -154,7 +160,7 @@ def get_coalition_cluster(kmeans, x_train, x_validation, y_train, y_validation, 
     x_train = x_train.append(x_validation).reset_index(drop=True)
     y_train = y_train.append(y_validation).reset_index(drop=True)
 
-    print("Automatically choosing coalition by clustering")
+    print("\nAutomatically choosing coalition by clustering")
     k_group_labels_train = get_groups_label_using_kmeans(x_train, kmeans)
 
     dict_k_train = calc_ratio_in_coalition(k_group_labels_train, y_train, k)
@@ -225,11 +231,11 @@ def which_group_is_bigger(two_group_labels_train, position, k):
 
 
 def get_clustering_coalition(x_test, x_train, x_validation, y_test, y_train, y_validation):
-    print_variance_before_choose_coalition(x_train)
+    #print_variance_before_choose_coalition(x_train)
     coalition_clustering = coalition_by_k_means_cluster(x_test, x_train, x_validation,
                                                         y_test, y_train, y_validation)
 
-    print_variance_after_choose_coalition(coalition_clustering, x_train, y_train)
+    #print_variance_after_choose_coalition(coalition_clustering, x_train, y_train)
 
 
 def get_strong_coalition(x_train, y_train, x_test, y_test):

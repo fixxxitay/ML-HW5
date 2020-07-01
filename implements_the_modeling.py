@@ -94,67 +94,62 @@ def save_voting_predictions(y_test_pred):
 
 
 def save_voting_predictions_new_test(y_test_pred, y_indexes):
-    y_test_pred_labels = [from_num_to_label[x] for x in y_test_pred]
-    df_y_test_pred_labels = pd.DataFrame(y_test_pred_labels)
-    tmp = y_indexes.add(1)
-    df_y_test_pred_labels['IdentityCard_Num'] = tmp
-    df_y_test_pred_labels = df_y_test_pred_labels.rename(columns={"0": "PredictVote", "IdentityCard_Num": "IdentityCard_Num"})
-    columns_titles = ["IdentityCard_Num", "PredictVote"]
-    df_y_test_pred_labels = df_y_test_pred_labels.reindex(columns=columns_titles, copy=True)
-    df_y_test_pred_labels.to_csv('new_test_voting_predictions.csv', index=False)
+    preds = pd.DataFrame({'PredictVote': y_test_pred})
+    results = pd.concat([y_indexes, preds])
+    results.to_csv('new_test_voting_predictions.csv', index=False)
 
 
 def train_some_models(x_train, y_train, x_validation, y_validation):
     ret = list()
 
-    print("SGDClassifier")
-    sgd_clf = SGDClassifier(random_state=92)
-    sgd_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(sgd_clf, x_validation, y_validation)
-    ret.append(("SGDClassifier", sgd_clf, acc))
+    #print("SGDClassifier")
+    #sgd_clf = SGDClassifier(random_state=92)
+    #sgd_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(sgd_clf, x_validation, y_validation)
+    #ret.append(("SGDClassifier", sgd_clf, acc))
 
-    print("KNeighborsClassifier")
-    knn_clf = KNeighborsClassifier()
-    knn_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(knn_clf, x_validation, y_validation)
-    ret.append(("KNeighborsClassifier", knn_clf, acc))
+    #print("KNeighborsClassifier")
+    #knn_clf = KNeighborsClassifier()
+    #knn_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(knn_clf, x_validation, y_validation)
+    #ret.append(("KNeighborsClassifier", knn_clf, acc))
 
-    print("DecisionTreeClassifier, min_samples_split=5 min_samples_leaf=2")
-    dt_clf = DecisionTreeClassifier(random_state=0, criterion='entropy', min_samples_split=5,
-                                    min_samples_leaf=2)
-    dt_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(dt_clf, x_validation, y_validation)
-    ret.append(("DecisionTreeClassifier, min_samples_split=5 min_samples_leaf=2", dt_clf, acc))
+    #print("DecisionTreeClassifier, min_samples_split=5 min_samples_leaf=2")
+    #dt_clf = DecisionTreeClassifier(random_state=0, criterion='entropy', min_samples_split=5,
+    #                                min_samples_leaf=2)
+    #dt_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(dt_clf, x_validation, y_validation)
+    #ret.append(("DecisionTreeClassifier, min_samples_split=5 min_samples_leaf=2", dt_clf, acc))
 
-    print("DecisionTreeClassifier, min_samples_split=4")
-    dt_clf = DecisionTreeClassifier(random_state=0, criterion='entropy', min_samples_split=4)
-    dt_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(dt_clf, x_validation, y_validation)
-    ret.append(("DecisionTreeClassifier, min_samples_split=4", dt_clf, acc))
+    #print("DecisionTreeClassifier, min_samples_split=4")
+    #dt_clf = DecisionTreeClassifier(random_state=0, criterion='entropy', min_samples_split=4)
+    #dt_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(dt_clf, x_validation, y_validation)
+    #ret.append(("DecisionTreeClassifier, min_samples_split=4", dt_clf, acc))
 
-    print("DecisionTreeClassifier2 - entropy, min_samples_split=3")
-    dt_clf = DecisionTreeClassifier(random_state=0, criterion='entropy', min_samples_split=3)
-    dt_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(dt_clf, x_validation, y_validation)
-    ret.append(("DecisionTreeClassifier2 - entropy, min_samples_split=3", dt_clf, acc))
+    #print("DecisionTreeClassifier2 - entropy, min_samples_split=3")
+    #dt_clf = DecisionTreeClassifier(random_state=0, criterion='entropy', min_samples_split=3)
+    #dt_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(dt_clf, x_validation, y_validation)
+    #ret.append(("DecisionTreeClassifier2 - entropy, min_samples_split=3", dt_clf, acc))
 
-    print("DecisionTreeClassifier - gini")
-    dt_clf = DecisionTreeClassifier(random_state=0, criterion='gini', min_samples_split=3)
-    dt_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(dt_clf, x_validation, y_validation)
-    ret.append(("DecisionTreeClassifier - gini", dt_clf, acc))
+    #print("DecisionTreeClassifier - gini")
+    #dt_clf = DecisionTreeClassifier(random_state=0, criterion='gini', min_samples_split=3)
+    #dt_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(dt_clf, x_validation, y_validation)
+    #ret.append(("DecisionTreeClassifier - gini", dt_clf, acc))
 
-    print("RandomForestClassifier - regular")
-    rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0)
-    rf_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
-    ret.append(("RandomForestClassifier - regular", rf_clf, acc))
+    #print("RandomForestClassifier - regular")
+    #rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0)
+    #rf_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
+    #ret.append(("RandomForestClassifier - regular", rf_clf, acc))
 
-    print("RandomForestClassifier - gini")
-    rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0, criterion='gini')
-    rf_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
-    ret.append(("RandomForestClassifier - gini", rf_clf, acc))
+    #print("RandomForestClassifier - gini")
+    #rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0, criterion='gini')
+    #rf_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
+    #ret.append(("RandomForestClassifier - gini", rf_clf, acc))
 
     print("RandomForestClassifier - entropy")
     rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0, criterion='entropy')
@@ -162,37 +157,37 @@ def train_some_models(x_train, y_train, x_validation, y_validation):
     acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
     ret.append(("RandomForestClassifier - entropy", rf_clf, acc))
 
-    print("RandomForestClassifier - entropy, min_samples_split=3")
-    rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0, criterion='entropy', min_samples_split=3)
-    rf_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
-    ret.append(("RandomForestClassifier - entropy, min_samples_split=3", rf_clf, acc))
+    #print("RandomForestClassifier - entropy, min_samples_split=3")
+    #rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0, criterion='entropy', min_samples_split=3)
+    #rf_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
+    #ret.append(("RandomForestClassifier - entropy, min_samples_split=3", rf_clf, acc))
 
-    print("RandomForestClassifier - entropy, min_samples_split=5")
-    rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0, criterion='entropy', min_samples_split=5)
-    rf_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
-    ret.append(("RandomForestClassifier - entropy, min_samples_split=5", rf_clf, acc))
+    #print("RandomForestClassifier - entropy, min_samples_split=5")
+    #rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0, criterion='entropy', min_samples_split=5)
+    #rf_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
+    #ret.append(("RandomForestClassifier - entropy, min_samples_split=5", rf_clf, acc))
 
-    print("RandomForestClassifier - entropy, min_samples_split=5 min_samples_leaf=2")
-    rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0, criterion='entropy', min_samples_split=5,
-                                    min_samples_leaf=2)
-    rf_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
-    ret.append(("RandomForestClassifier - entropy, min_samples_split=5 min_samples_leaf=2", rf_clf, acc))
+    #print("RandomForestClassifier - entropy, min_samples_split=5 min_samples_leaf=2")
+    #rf_clf = RandomForestClassifier(n_jobs=-1, random_state=0, criterion='entropy', min_samples_split=5,
+    #                                min_samples_leaf=2)
+    #rf_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(rf_clf, x_validation, y_validation)
+    #ret.append(("RandomForestClassifier - entropy, min_samples_split=5 min_samples_leaf=2", rf_clf, acc))
 
-    print("MLP")
-    mlp_clf = MLPClassifier(max_iter=1600)
-    mlp_clf.fit(x_train, y_train)
-    acc = print_cross_val_accuracy(mlp_clf, x_validation, y_validation)
-    ret.append(("MLP", mlp_clf, acc))
+    #print("MLP")
+    #mlp_clf = MLPClassifier(max_iter=1600)
+    #mlp_clf.fit(x_train, y_train)
+    #acc = print_cross_val_accuracy(mlp_clf, x_validation, y_validation)
+    #ret.append(("MLP", mlp_clf, acc))
 
     return ret
 
 
 def calculate_overall_test_error(y_test, y_test_pred):
-    overall_test_error = 1 - len(y_test[y_test_pred == y_test]) / len(y_test)
-    print("overall test error is: ")
+    overall_test_error = len(y_test[y_test_pred == y_test]) / len(y_test)
+    print("The accuracy on the test set is: ")
     print(overall_test_error)
 
 

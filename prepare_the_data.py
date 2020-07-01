@@ -76,24 +76,24 @@ def complete_missing_values(df_train: pd.DataFrame, df_test: pd.DataFrame, df_va
 def nominal_to_numerical_categories(df_test: pd.DataFrame, df_train: pd.DataFrame, df_validation: pd.DataFrame,
                                     df_new_test: pd.DataFrame):
     # from nominal to Categorical
-    df_train = df_train.apply(lambda x: pd.Categorical(x) if x.dtype != 'float64' else x, axis=0)
+    df_train = df_train.apply(lambda x: pd.Categorical(x) if x.dtype != 'float64' and x.dtype != 'int64' else x, axis=0)
     # give number to each Categorical
-    df_train = df_train.apply(lambda x: x.cat.codes if x.dtype != 'float64' else x, axis=0)
+    df_train = df_train.apply(lambda x: x.cat.codes if x.dtype != 'float64' and x.dtype != 'int64' else x, axis=0)
 
     # from nominal to Categorical
-    df_validation = df_validation.apply(lambda x: pd.Categorical(x) if x.dtype != 'float64' else x, axis=0)
+    df_validation = df_validation.apply(lambda x: pd.Categorical(x) if x.dtype != 'float64' and x.dtype != 'int64' else x, axis=0)
     # give number to each Categorical
-    df_validation = df_validation.apply(lambda x: x.cat.codes if x.dtype != 'float64' else x, axis=0)
+    df_validation = df_validation.apply(lambda x: x.cat.codes if x.dtype != 'float64' and x.dtype != 'int64' else x, axis=0)
 
     # from nominal to Categorical
-    df_test = df_test.apply(lambda x: pd.Categorical(x) if x.dtype != 'float64' else x, axis=0)
+    df_test = df_test.apply(lambda x: pd.Categorical(x) if x.dtype != 'float64' and x.dtype != 'int64' else x, axis=0)
     # give number to each Categorical
-    df_test = df_test.apply(lambda x: x.cat.codes if x.dtype != 'float64' else x, axis=0)
+    df_test = df_test.apply(lambda x: x.cat.codes if x.dtype != 'float64' and x.dtype != 'int64' else x, axis=0)
 
     # from nominal to Categorical
-    df_new_test = df_new_test.apply(lambda x: pd.Categorical(x) if x.dtype != 'float64' else x, axis=0)
+    df_new_test = df_new_test.apply(lambda x: pd.Categorical(x) if x.dtype != 'float64' and x.dtype != 'int64' else x, axis=0)
     # give number to each Categorical
-    df_new_test = df_new_test.apply(lambda x: x.cat.codes if x.dtype != 'float64' else x, axis=0)
+    df_new_test = df_new_test.apply(lambda x: x.cat.codes if x.dtype != 'float64' and x.dtype != 'int64' else x, axis=0)
 
     return df_test, df_train, df_validation, df_new_test
 
@@ -117,8 +117,7 @@ def normalize(df_test: pd.DataFrame, df_train: pd.DataFrame, df_validation: pd.D
     # z-score for normal features
     normal_scaler = StandardScaler()
     df_train[normal_features_right_features] = normal_scaler.fit_transform(df_train[normal_features_right_features])
-    df_validation[normal_features_right_features] = normal_scaler.transform(
-        df_validation[normal_features_right_features])
+    df_validation[normal_features_right_features] = normal_scaler.transform(df_validation[normal_features_right_features])
     df_test[normal_features_right_features] = normal_scaler.transform(df_test[normal_features_right_features])
     df_new_test[normal_features_right_features] = normal_scaler.transform(df_new_test[normal_features_right_features])
 
@@ -151,13 +150,12 @@ def remove_outliers(threshold: float, df_train: pd.DataFrame, df_validation: pd.
     return df_train, df_validation, df_test
 
 
-def main():
+def prepare_data():
     # first part - data preparation
     df = pd.read_csv("ElectionsData.csv")
 
     # load the new test data
     df_new_test = pd.read_csv("ElectionsData_Pred_Features.csv")
-    print(df_new_test)
 
     # split the data to train , test and validation
     df_train, df_test, df_validation = deterministic_split(df, 0.6, 0.2)
@@ -196,4 +194,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    prepare_data()
