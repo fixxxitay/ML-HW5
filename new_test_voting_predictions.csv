@@ -134,7 +134,7 @@ IdentityCard_Num,PredictVote
 133,Khakis
 134,Browns
 135,Reds
-136,Browns
+136,Yellows
 137,Turquoises
 138,Khakis
 139,Greys
@@ -166,7 +166,7 @@ IdentityCard_Num,PredictVote
 165,Pinks
 166,Greys
 167,Browns
-168,Browns
+168,Purples
 169,Turquoises
 170,Whites
 171,Browns
@@ -224,7 +224,7 @@ IdentityCard_Num,PredictVote
 223,Pinks
 224,Browns
 225,Turquoises
-226,Purples
+226,Browns
 227,Browns
 228,Turquoises
 229,Browns
@@ -317,7 +317,7 @@ IdentityCard_Num,PredictVote
 316,Browns
 317,Browns
 318,Violets
-319,Greys
+319,Pinks
 320,Turquoises
 321,Khakis
 322,Greens
@@ -401,7 +401,7 @@ IdentityCard_Num,PredictVote
 400,Blues
 401,Reds
 402,Turquoises
-403,Whites
+403,Khakis
 404,Browns
 405,Turquoises
 406,Greens
@@ -417,7 +417,7 @@ IdentityCard_Num,PredictVote
 416,Khakis
 417,Browns
 418,Pinks
-419,Blues
+419,Pinks
 420,Khakis
 421,Turquoises
 422,Browns
@@ -526,7 +526,7 @@ IdentityCard_Num,PredictVote
 525,Reds
 526,Purples
 527,Greys
-528,Violets
+528,Purples
 529,Browns
 530,Greens
 531,Reds
@@ -618,7 +618,7 @@ IdentityCard_Num,PredictVote
 617,Pinks
 618,Reds
 619,Khakis
-620,Turquoises
+620,Whites
 621,Browns
 622,Turquoises
 623,Reds
@@ -752,11 +752,11 @@ IdentityCard_Num,PredictVote
 751,Blues
 752,Yellows
 753,Browns
-754,Browns
+754,Purples
 755,Turquoises
 756,Turquoises
 757,Greens
-758,Oranges
+758,Turquoises
 759,Blues
 760,Browns
 761,Browns
@@ -779,7 +779,7 @@ IdentityCard_Num,PredictVote
 778,Yellows
 779,Khakis
 780,Khakis
-781,Pinks
+781,Yellows
 782,Turquoises
 783,Turquoises
 784,Browns
@@ -817,7 +817,7 @@ IdentityCard_Num,PredictVote
 816,Greens
 817,Browns
 818,Turquoises
-819,Turquoises
+819,Whites
 820,Browns
 821,Browns
 822,Khakis
@@ -936,7 +936,7 @@ IdentityCard_Num,PredictVote
 935,Turquoises
 936,Browns
 937,Pinks
-938,Whites
+938,Khakis
 939,Blues
 940,Turquoises
 941,Oranges
@@ -951,7 +951,7 @@ IdentityCard_Num,PredictVote
 950,Greens
 951,Blues
 952,Browns
-953,Whites
+953,Khakis
 954,Browns
 955,Turquoises
 956,Turquoises
@@ -996,7 +996,7 @@ IdentityCard_Num,PredictVote
 995,Browns
 996,Khakis
 997,Blues
-998,Pinks
+998,Khakis
 999,Turquoises
 1000,Greys
 1001,Oranges
@@ -1022,7 +1022,7 @@ IdentityCard_Num,PredictVote
 1021,Greens
 1022,Turquoises
 1023,Reds
-1024,Violets
+1024,Purples
 1025,Browns
 1026,Khakis
 1027,Turquoises
@@ -1035,10 +1035,10 @@ IdentityCard_Num,PredictVote
 1034,Khakis
 1035,Browns
 1036,Greys
-1037,Turquoises
+1037,Browns
 1038,Turquoises
 1039,Turquoises
-1040,Purples
+1040,Browns
 1041,Turquoises
 1042,Khakis
 1043,Browns
@@ -1073,7 +1073,7 @@ IdentityCard_Num,PredictVote
 1072,Pinks
 1073,Yellows
 1074,Greys
-1075,Whites
+1075,Turquoises
 1076,Pinks
 1077,Browns
 1078,Blues
@@ -1109,7 +1109,7 @@ IdentityCard_Num,PredictVote
 1108,Browns
 1109,Khakis
 1110,Turquoises
-1111,Whites
+1111,Khakis
 1112,Blues
 1113,Browns
 1114,Turquoises
@@ -1183,7 +1183,7 @@ IdentityCard_Num,PredictVote
 1182,Reds
 1183,Greens
 1184,Browns
-1185,Violets
+1185,Browns
 1186,Browns
 1187,Purples
 1188,Greens
@@ -1194,7 +1194,7 @@ IdentityCard_Num,PredictVote
 1193,Browns
 1194,Greens
 1195,Khakis
-1196,Whites
+1196,Khakis
 1197,Blues
 1198,Whites
 1199,Turquoises
@@ -1235,7 +1235,7 @@ IdentityCard_Num,PredictVote
 1234,Whites
 1235,Khakis
 1236,Turquoises
-1237,Yellows
+1237,Purples
 1238,Khakis
 1239,Greens
 1240,Turquoises
@@ -1283,7 +1283,7 @@ IdentityCard_Num,PredictVote
 1282,Turquoises
 1283,Khakis
 1284,Turquoises
-1285,Browns
+1285,Purples
 1286,Blues
 1287,Pinks
 1288,Browns
@@ -1341,7 +1341,7 @@ IdentityCard_Num,PredictVote
 1340,Turquoises
 1341,Reds
 1342,Reds
-1343,Turquoises
+1343,Oranges
 1344,Khakis
 1345,Browns
 1346,Turquoises
@@ -1505,7 +1505,7 @@ IdentityCard_Num,PredictVote
 1504,Khakis
 1505,Turquoises
 1506,Khakis
-1507,Violets
+1507,Browns
 1508,Khakis
 1509,Turquoises
 1510,Khakis
@@ -1634,7 +1634,7 @@ IdentityCard_Num,PredictVote
 1633,Blues
 1634,Greens
 1635,Browns
-1636,Turquoises
+1636,Khakis
 1637,Purples
 1638,Oranges
 1639,Browns
@@ -1739,7 +1739,7 @@ IdentityCard_Num,PredictVote
 1738,Oranges
 1739,Purples
 1740,Whites
-1741,Whites
+1741,Khakis
 1742,Greens
 1743,Reds
 1744,Turquoises
@@ -1827,7 +1827,7 @@ IdentityCard_Num,PredictVote
 1826,Browns
 1827,Khakis
 1828,Turquoises
-1829,Yellows
+1829,Greens
 1830,Purples
 1831,Khakis
 1832,Browns
@@ -1841,7 +1841,7 @@ IdentityCard_Num,PredictVote
 1840,Greens
 1841,Khakis
 1842,Turquoises
-1843,Yellows
+1843,Browns
 1844,Browns
 1845,Khakis
 1846,Turquoises
@@ -1918,7 +1918,7 @@ IdentityCard_Num,PredictVote
 1917,Blues
 1918,Reds
 1919,Browns
-1920,Purples
+1920,Violets
 1921,Khakis
 1922,Purples
 1923,Khakis
@@ -1957,7 +1957,7 @@ IdentityCard_Num,PredictVote
 1956,Khakis
 1957,Turquoises
 1958,Turquoises
-1959,Whites
+1959,Khakis
 1960,Browns
 1961,Khakis
 1962,Reds
@@ -1974,7 +1974,7 @@ IdentityCard_Num,PredictVote
 1973,Reds
 1974,Turquoises
 1975,Turquoises
-1976,Khakis
+1976,Whites
 1977,Browns
 1978,Khakis
 1979,Khakis
@@ -2011,7 +2011,7 @@ IdentityCard_Num,PredictVote
 2010,Turquoises
 2011,Khakis
 2012,Turquoises
-2013,Browns
+2013,Violets
 2014,Browns
 2015,Pinks
 2016,Turquoises
@@ -2217,7 +2217,7 @@ IdentityCard_Num,PredictVote
 2216,Turquoises
 2217,Greens
 2218,Turquoises
-2219,Browns
+2219,Purples
 2220,Khakis
 2221,Reds
 2222,Browns
@@ -2277,7 +2277,7 @@ IdentityCard_Num,PredictVote
 2276,Purples
 2277,Browns
 2278,Turquoises
-2279,Whites
+2279,Greys
 2280,Browns
 2281,Turquoises
 2282,Browns
@@ -2363,15 +2363,15 @@ IdentityCard_Num,PredictVote
 2362,Browns
 2363,Blues
 2364,Pinks
-2365,Yellows
+2365,Oranges
 2366,Reds
 2367,Khakis
 2368,Oranges
 2369,Greens
 2370,Khakis
 2371,Turquoises
-2372,Turquoises
-2373,Whites
+2372,Oranges
+2373,Khakis
 2374,Browns
 2375,Browns
 2376,Browns
@@ -2455,7 +2455,7 @@ IdentityCard_Num,PredictVote
 2454,Khakis
 2455,Greys
 2456,Greens
-2457,Reds
+2457,Oranges
 2458,Browns
 2459,Khakis
 2460,Greys
@@ -2538,7 +2538,7 @@ IdentityCard_Num,PredictVote
 2537,Purples
 2538,Reds
 2539,Reds
-2540,Purples
+2540,Yellows
 2541,Blues
 2542,Reds
 2543,Turquoises
@@ -2571,7 +2571,7 @@ IdentityCard_Num,PredictVote
 2570,Greens
 2571,Blues
 2572,Browns
-2573,Khakis
+2573,Whites
 2574,Turquoises
 2575,Greens
 2576,Purples
@@ -2629,7 +2629,7 @@ IdentityCard_Num,PredictVote
 2628,Turquoises
 2629,Reds
 2630,Browns
-2631,Whites
+2631,Khakis
 2632,Browns
 2633,Yellows
 2634,Browns
@@ -2653,7 +2653,7 @@ IdentityCard_Num,PredictVote
 2652,Browns
 2653,Khakis
 2654,Khakis
-2655,Browns
+2655,Purples
 2656,Browns
 2657,Whites
 2658,Browns
@@ -2672,7 +2672,7 @@ IdentityCard_Num,PredictVote
 2671,Turquoises
 2672,Browns
 2673,Browns
-2674,Blues
+2674,Yellows
 2675,Turquoises
 2676,Violets
 2677,Browns
@@ -2804,7 +2804,7 @@ IdentityCard_Num,PredictVote
 2803,Purples
 2804,Browns
 2805,Turquoises
-2806,Yellows
+2806,Blues
 2807,Turquoises
 2808,Greens
 2809,Khakis
@@ -2876,7 +2876,7 @@ IdentityCard_Num,PredictVote
 2875,Khakis
 2876,Reds
 2877,Browns
-2878,Violets
+2878,Browns
 2879,Pinks
 2880,Browns
 2881,Khakis
@@ -2904,7 +2904,7 @@ IdentityCard_Num,PredictVote
 2903,Yellows
 2904,Turquoises
 2905,Khakis
-2906,Yellows
+2906,Turquoises
 2907,Greys
 2908,Greys
 2909,Browns
@@ -3111,7 +3111,7 @@ IdentityCard_Num,PredictVote
 3110,Turquoises
 3111,Browns
 3112,Khakis
-3113,Violets
+3113,Purples
 3114,Browns
 3115,Khakis
 3116,Browns
@@ -3162,12 +3162,12 @@ IdentityCard_Num,PredictVote
 3161,Blues
 3162,Turquoises
 3163,Purples
-3164,Pinks
+3164,Khakis
 3165,Turquoises
 3166,Khakis
 3167,Khakis
 3168,Browns
-3169,Browns
+3169,Purples
 3170,Khakis
 3171,Browns
 3172,Greens
@@ -3220,7 +3220,7 @@ IdentityCard_Num,PredictVote
 3219,Browns
 3220,Browns
 3221,Khakis
-3222,Browns
+3222,Purples
 3223,Yellows
 3224,Pinks
 3225,Browns
@@ -3240,7 +3240,7 @@ IdentityCard_Num,PredictVote
 3239,Turquoises
 3240,Greens
 3241,Turquoises
-3242,Browns
+3242,Turquoises
 3243,Turquoises
 3244,Greys
 3245,Browns
@@ -3373,7 +3373,7 @@ IdentityCard_Num,PredictVote
 3372,Yellows
 3373,Purples
 3374,Pinks
-3375,Yellows
+3375,Blues
 3376,Reds
 3377,Turquoises
 3378,Violets
@@ -3398,7 +3398,7 @@ IdentityCard_Num,PredictVote
 3397,Oranges
 3398,Browns
 3399,Browns
-3400,Yellows
+3400,Blues
 3401,Turquoises
 3402,Turquoises
 3403,Khakis
@@ -3436,7 +3436,7 @@ IdentityCard_Num,PredictVote
 3435,Whites
 3436,Turquoises
 3437,Turquoises
-3438,Whites
+3438,Khakis
 3439,Greys
 3440,Browns
 3441,Turquoises
@@ -3457,7 +3457,7 @@ IdentityCard_Num,PredictVote
 3456,Oranges
 3457,Browns
 3458,Khakis
-3459,Violets
+3459,Purples
 3460,Khakis
 3461,Turquoises
 3462,Khakis
@@ -3539,7 +3539,7 @@ IdentityCard_Num,PredictVote
 3538,Khakis
 3539,Reds
 3540,Browns
-3541,Whites
+3541,Khakis
 3542,Khakis
 3543,Yellows
 3544,Blues
@@ -3577,7 +3577,7 @@ IdentityCard_Num,PredictVote
 3576,Whites
 3577,Reds
 3578,Turquoises
-3579,Khakis
+3579,Whites
 3580,Khakis
 3581,Greens
 3582,Yellows
@@ -3673,7 +3673,7 @@ IdentityCard_Num,PredictVote
 3672,Greys
 3673,Khakis
 3674,Reds
-3675,Oranges
+3675,Yellows
 3676,Khakis
 3677,Oranges
 3678,Whites
@@ -3712,7 +3712,7 @@ IdentityCard_Num,PredictVote
 3711,Turquoises
 3712,Violets
 3713,Yellows
-3714,Purples
+3714,Browns
 3715,Blues
 3716,Greens
 3717,Reds
@@ -3807,7 +3807,7 @@ IdentityCard_Num,PredictVote
 3806,Khakis
 3807,Greens
 3808,Turquoises
-3809,Oranges
+3809,Pinks
 3810,Khakis
 3811,Purples
 3812,Browns
@@ -3824,7 +3824,7 @@ IdentityCard_Num,PredictVote
 3823,Browns
 3824,Reds
 3825,Whites
-3826,Greens
+3826,Turquoises
 3827,Pinks
 3828,Whites
 3829,Greens
@@ -3865,11 +3865,11 @@ IdentityCard_Num,PredictVote
 3864,Whites
 3865,Browns
 3866,Purples
-3867,Oranges
+3867,Turquoises
 3868,Khakis
 3869,Whites
 3870,Khakis
-3871,Whites
+3871,Reds
 3872,Browns
 3873,Browns
 3874,Whites
@@ -3880,7 +3880,7 @@ IdentityCard_Num,PredictVote
 3879,Pinks
 3880,Greens
 3881,Greens
-3882,Reds
+3882,Yellows
 3883,Browns
 3884,Purples
 3885,Yellows
@@ -3998,7 +3998,7 @@ IdentityCard_Num,PredictVote
 3997,Browns
 3998,Browns
 3999,Browns
-4000,Greys
+4000,Turquoises
 4001,Browns
 4002,Violets
 4003,Browns
@@ -4038,7 +4038,7 @@ IdentityCard_Num,PredictVote
 4037,Greens
 4038,Whites
 4039,Khakis
-4040,Purples
+4040,Browns
 4041,Yellows
 4042,Browns
 4043,Browns
@@ -4049,7 +4049,7 @@ IdentityCard_Num,PredictVote
 4048,Blues
 4049,Purples
 4050,Reds
-4051,Violets
+4051,Browns
 4052,Turquoises
 4053,Browns
 4054,Reds
@@ -4073,7 +4073,7 @@ IdentityCard_Num,PredictVote
 4072,Browns
 4073,Khakis
 4074,Turquoises
-4075,Turquoises
+4075,Browns
 4076,Greens
 4077,Purples
 4078,Khakis
@@ -4092,7 +4092,7 @@ IdentityCard_Num,PredictVote
 4091,Turquoises
 4092,Yellows
 4093,Reds
-4094,Browns
+4094,Violets
 4095,Khakis
 4096,Turquoises
 4097,Browns
@@ -4114,7 +4114,7 @@ IdentityCard_Num,PredictVote
 4113,Greens
 4114,Greens
 4115,Pinks
-4116,Violets
+4116,Purples
 4117,Browns
 4118,Reds
 4119,Turquoises
@@ -4200,7 +4200,7 @@ IdentityCard_Num,PredictVote
 4199,Turquoises
 4200,Greys
 4201,Whites
-4202,Whites
+4202,Khakis
 4203,Greys
 4204,Violets
 4205,Browns
@@ -4280,7 +4280,7 @@ IdentityCard_Num,PredictVote
 4279,Blues
 4280,Reds
 4281,Yellows
-4282,Violets
+4282,Purples
 4283,Blues
 4284,Turquoises
 4285,Violets
@@ -4308,7 +4308,7 @@ IdentityCard_Num,PredictVote
 4307,Browns
 4308,Greens
 4309,Turquoises
-4310,Khakis
+4310,Whites
 4311,Greens
 4312,Blues
 4313,Turquoises
@@ -4324,7 +4324,7 @@ IdentityCard_Num,PredictVote
 4323,Turquoises
 4324,Browns
 4325,Khakis
-4326,Violets
+4326,Purples
 4327,Whites
 4328,Whites
 4329,Browns
@@ -4373,14 +4373,14 @@ IdentityCard_Num,PredictVote
 4372,Yellows
 4373,Khakis
 4374,Turquoises
-4375,Browns
+4375,Yellows
 4376,Turquoises
 4377,Reds
 4378,Violets
 4379,Browns
 4380,Greens
 4381,Whites
-4382,Whites
+4382,Khakis
 4383,Turquoises
 4384,Browns
 4385,Whites
@@ -4399,7 +4399,7 @@ IdentityCard_Num,PredictVote
 4398,Khakis
 4399,Whites
 4400,Purples
-4401,Yellows
+4401,Browns
 4402,Whites
 4403,Khakis
 4404,Khakis
@@ -4418,7 +4418,7 @@ IdentityCard_Num,PredictVote
 4417,Blues
 4418,Greens
 4419,Greys
-4420,Purples
+4420,Browns
 4421,Greys
 4422,Browns
 4423,Browns
@@ -4520,7 +4520,7 @@ IdentityCard_Num,PredictVote
 4519,Browns
 4520,Whites
 4521,Turquoises
-4522,Browns
+4522,Violets
 4523,Greens
 4524,Blues
 4525,Turquoises
@@ -4628,7 +4628,7 @@ IdentityCard_Num,PredictVote
 4627,Whites
 4628,Browns
 4629,Reds
-4630,Oranges
+4630,Yellows
 4631,Purples
 4632,Turquoises
 4633,Violets
@@ -4657,7 +4657,7 @@ IdentityCard_Num,PredictVote
 4656,Greens
 4657,Whites
 4658,Browns
-4659,Reds
+4659,Turquoises
 4660,Khakis
 4661,Violets
 4662,Pinks
@@ -4676,7 +4676,7 @@ IdentityCard_Num,PredictVote
 4675,Browns
 4676,Turquoises
 4677,Turquoises
-4678,Browns
+4678,Blues
 4679,Browns
 4680,Browns
 4681,Blues
@@ -4692,7 +4692,7 @@ IdentityCard_Num,PredictVote
 4691,Browns
 4692,Purples
 4693,Browns
-4694,Turquoises
+4694,Khakis
 4695,Oranges
 4696,Khakis
 4697,Greens
@@ -4914,7 +4914,7 @@ IdentityCard_Num,PredictVote
 4913,Khakis
 4914,Turquoises
 4915,Browns
-4916,Browns
+4916,Purples
 4917,Khakis
 4918,Browns
 4919,Khakis
@@ -5054,7 +5054,7 @@ IdentityCard_Num,PredictVote
 5053,Browns
 5054,Turquoises
 5055,Turquoises
-5056,Whites
+5056,Khakis
 5057,Khakis
 5058,Turquoises
 5059,Turquoises
@@ -5129,7 +5129,7 @@ IdentityCard_Num,PredictVote
 5128,Browns
 5129,Purples
 5130,Whites
-5131,Whites
+5131,Turquoises
 5132,Browns
 5133,Khakis
 5134,Browns
@@ -5241,7 +5241,7 @@ IdentityCard_Num,PredictVote
 5240,Browns
 5241,Browns
 5242,Browns
-5243,Khakis
+5243,Pinks
 5244,Browns
 5245,Blues
 5246,Turquoises
@@ -5277,7 +5277,7 @@ IdentityCard_Num,PredictVote
 5276,Browns
 5277,Khakis
 5278,Greens
-5279,Turquoises
+5279,Whites
 5280,Turquoises
 5281,Khakis
 5282,Turquoises
@@ -5292,7 +5292,7 @@ IdentityCard_Num,PredictVote
 5291,Khakis
 5292,Khakis
 5293,Greens
-5294,Oranges
+5294,Yellows
 5295,Browns
 5296,Greens
 5297,Khakis
@@ -5339,7 +5339,7 @@ IdentityCard_Num,PredictVote
 5338,Whites
 5339,Browns
 5340,Blues
-5341,Whites
+5341,Khakis
 5342,Turquoises
 5343,Browns
 5344,Greens
@@ -5350,7 +5350,7 @@ IdentityCard_Num,PredictVote
 5349,Browns
 5350,Whites
 5351,Blues
-5352,Khakis
+5352,Greys
 5353,Blues
 5354,Browns
 5355,Reds
@@ -5363,11 +5363,11 @@ IdentityCard_Num,PredictVote
 5362,Violets
 5363,Browns
 5364,Khakis
-5365,Browns
+5365,Purples
 5366,Greens
 5367,Khakis
 5368,Whites
-5369,Khakis
+5369,Whites
 5370,Khakis
 5371,Turquoises
 5372,Browns
@@ -5377,7 +5377,7 @@ IdentityCard_Num,PredictVote
 5376,Browns
 5377,Turquoises
 5378,Reds
-5379,Whites
+5379,Turquoises
 5380,Browns
 5381,Greys
 5382,Greens
@@ -5490,11 +5490,11 @@ IdentityCard_Num,PredictVote
 5489,Browns
 5490,Turquoises
 5491,Greens
-5492,Oranges
+5492,Whites
 5493,Greens
 5494,Browns
 5495,Browns
-5496,Browns
+5496,Violets
 5497,Browns
 5498,Blues
 5499,Browns
@@ -5510,7 +5510,7 @@ IdentityCard_Num,PredictVote
 5509,Turquoises
 5510,Reds
 5511,Turquoises
-5512,Greens
+5512,Turquoises
 5513,Greys
 5514,Purples
 5515,Whites
@@ -5653,7 +5653,7 @@ IdentityCard_Num,PredictVote
 5652,Browns
 5653,Greens
 5654,Khakis
-5655,Whites
+5655,Khakis
 5656,Whites
 5657,Purples
 5658,Browns
@@ -5666,7 +5666,7 @@ IdentityCard_Num,PredictVote
 5665,Browns
 5666,Yellows
 5667,Browns
-5668,Browns
+5668,Yellows
 5669,Greens
 5670,Browns
 5671,Turquoises
@@ -5757,7 +5757,7 @@ IdentityCard_Num,PredictVote
 5756,Browns
 5757,Oranges
 5758,Turquoises
-5759,Whites
+5759,Khakis
 5760,Reds
 5761,Browns
 5762,Khakis
@@ -5894,7 +5894,7 @@ IdentityCard_Num,PredictVote
 5893,Browns
 5894,Browns
 5895,Turquoises
-5896,Yellows
+5896,Browns
 5897,Turquoises
 5898,Khakis
 5899,Oranges
@@ -5919,7 +5919,7 @@ IdentityCard_Num,PredictVote
 5918,Greens
 5919,Browns
 5920,Purples
-5921,Violets
+5921,Browns
 5922,Greys
 5923,Browns
 5924,Oranges
@@ -5948,7 +5948,7 @@ IdentityCard_Num,PredictVote
 5947,Browns
 5948,Turquoises
 5949,Turquoises
-5950,Purples
+5950,Violets
 5951,Violets
 5952,Oranges
 5953,Purples
@@ -5958,8 +5958,8 @@ IdentityCard_Num,PredictVote
 5957,Reds
 5958,Oranges
 5959,Turquoises
-5960,Violets
-5961,Browns
+5960,Pinks
+5961,Purples
 5962,Browns
 5963,Greens
 5964,Purples
@@ -6017,7 +6017,7 @@ IdentityCard_Num,PredictVote
 6016,Browns
 6017,Khakis
 6018,Turquoises
-6019,Yellows
+6019,Blues
 6020,Greens
 6021,Browns
 6022,Browns
@@ -6032,7 +6032,7 @@ IdentityCard_Num,PredictVote
 6031,Purples
 6032,Greens
 6033,Browns
-6034,Browns
+6034,Purples
 6035,Turquoises
 6036,Browns
 6037,Turquoises
@@ -6058,7 +6058,7 @@ IdentityCard_Num,PredictVote
 6057,Khakis
 6058,Violets
 6059,Greys
-6060,Purples
+6060,Violets
 6061,Pinks
 6062,Whites
 6063,Khakis
@@ -6089,7 +6089,7 @@ IdentityCard_Num,PredictVote
 6088,Browns
 6089,Turquoises
 6090,Turquoises
-6091,Turquoises
+6091,Khakis
 6092,Browns
 6093,Oranges
 6094,Browns
@@ -6178,7 +6178,7 @@ IdentityCard_Num,PredictVote
 6177,Pinks
 6178,Oranges
 6179,Greys
-6180,Reds
+6180,Yellows
 6181,Greys
 6182,Browns
 6183,Greys
@@ -6309,7 +6309,7 @@ IdentityCard_Num,PredictVote
 6308,Khakis
 6309,Browns
 6310,Reds
-6311,Violets
+6311,Browns
 6312,Turquoises
 6313,Turquoises
 6314,Browns
@@ -6368,7 +6368,7 @@ IdentityCard_Num,PredictVote
 6367,Purples
 6368,Oranges
 6369,Browns
-6370,Oranges
+6370,Pinks
 6371,Greens
 6372,Turquoises
 6373,Browns
@@ -6381,7 +6381,7 @@ IdentityCard_Num,PredictVote
 6380,Turquoises
 6381,Blues
 6382,Khakis
-6383,Khakis
+6383,Whites
 6384,Turquoises
 6385,Browns
 6386,Khakis
@@ -6389,8 +6389,8 @@ IdentityCard_Num,PredictVote
 6388,Blues
 6389,Khakis
 6390,Browns
-6391,Purples
-6392,Blues
+6391,Browns
+6392,Violets
 6393,Turquoises
 6394,Purples
 6395,Browns
@@ -6450,7 +6450,7 @@ IdentityCard_Num,PredictVote
 6449,Reds
 6450,Turquoises
 6451,Yellows
-6452,Turquoises
+6452,Whites
 6453,Purples
 6454,Pinks
 6455,Oranges
@@ -6605,7 +6605,7 @@ IdentityCard_Num,PredictVote
 6604,Oranges
 6605,Browns
 6606,Browns
-6607,Purples
+6607,Browns
 6608,Blues
 6609,Turquoises
 6610,Greys
@@ -6648,7 +6648,7 @@ IdentityCard_Num,PredictVote
 6647,Browns
 6648,Reds
 6649,Turquoises
-6650,Oranges
+6650,Reds
 6651,Browns
 6652,Khakis
 6653,Oranges
@@ -6675,7 +6675,7 @@ IdentityCard_Num,PredictVote
 6674,Khakis
 6675,Browns
 6676,Greys
-6677,Turquoises
+6677,Yellows
 6678,Oranges
 6679,Purples
 6680,Turquoises
@@ -6712,7 +6712,7 @@ IdentityCard_Num,PredictVote
 6711,Turquoises
 6712,Whites
 6713,Blues
-6714,Browns
+6714,Purples
 6715,Reds
 6716,Greens
 6717,Greens
@@ -6748,7 +6748,7 @@ IdentityCard_Num,PredictVote
 6747,Greens
 6748,Pinks
 6749,Turquoises
-6750,Whites
+6750,Khakis
 6751,Turquoises
 6752,Turquoises
 6753,Yellows
@@ -6767,7 +6767,7 @@ IdentityCard_Num,PredictVote
 6766,Khakis
 6767,Khakis
 6768,Browns
-6769,Pinks
+6769,Khakis
 6770,Khakis
 6771,Turquoises
 6772,Violets
@@ -6827,7 +6827,7 @@ IdentityCard_Num,PredictVote
 6826,Greys
 6827,Greens
 6828,Turquoises
-6829,Browns
+6829,Violets
 6830,Browns
 6831,Whites
 6832,Purples
@@ -6860,9 +6860,9 @@ IdentityCard_Num,PredictVote
 6859,Greys
 6860,Browns
 6861,Blues
-6862,Browns
+6862,Violets
 6863,Khakis
-6864,Violets
+6864,Browns
 6865,Greens
 6866,Browns
 6867,Reds
@@ -6912,7 +6912,7 @@ IdentityCard_Num,PredictVote
 6911,Browns
 6912,Turquoises
 6913,Blues
-6914,Yellows
+6914,Greens
 6915,Browns
 6916,Turquoises
 6917,Blues
@@ -7013,7 +7013,7 @@ IdentityCard_Num,PredictVote
 7012,Khakis
 7013,Browns
 7014,Khakis
-7015,Yellows
+7015,Browns
 7016,Browns
 7017,Browns
 7018,Browns
@@ -7045,7 +7045,7 @@ IdentityCard_Num,PredictVote
 7044,Browns
 7045,Turquoises
 7046,Browns
-7047,Violets
+7047,Purples
 7048,Khakis
 7049,Greens
 7050,Pinks
@@ -7053,7 +7053,7 @@ IdentityCard_Num,PredictVote
 7052,Purples
 7053,Greens
 7054,Browns
-7055,Violets
+7055,Browns
 7056,Whites
 7057,Browns
 7058,Reds
@@ -7091,7 +7091,7 @@ IdentityCard_Num,PredictVote
 7090,Greens
 7091,Khakis
 7092,Whites
-7093,Blues
+7093,Pinks
 7094,Oranges
 7095,Turquoises
 7096,Browns
@@ -7158,7 +7158,7 @@ IdentityCard_Num,PredictVote
 7157,Purples
 7158,Oranges
 7159,Browns
-7160,Whites
+7160,Khakis
 7161,Turquoises
 7162,Yellows
 7163,Greys
@@ -7224,7 +7224,7 @@ IdentityCard_Num,PredictVote
 7223,Browns
 7224,Whites
 7225,Yellows
-7226,Violets
+7226,Purples
 7227,Greens
 7228,Browns
 7229,Browns
@@ -7252,7 +7252,7 @@ IdentityCard_Num,PredictVote
 7251,Greens
 7252,Greens
 7253,Greens
-7254,Blues
+7254,Yellows
 7255,Browns
 7256,Greens
 7257,Browns
@@ -7274,7 +7274,7 @@ IdentityCard_Num,PredictVote
 7273,Khakis
 7274,Turquoises
 7275,Browns
-7276,Yellows
+7276,Browns
 7277,Oranges
 7278,Blues
 7279,Browns
@@ -7338,7 +7338,7 @@ IdentityCard_Num,PredictVote
 7337,Reds
 7338,Greens
 7339,Turquoises
-7340,Pinks
+7340,Turquoises
 7341,Browns
 7342,Greens
 7343,Purples
@@ -7399,7 +7399,7 @@ IdentityCard_Num,PredictVote
 7398,Browns
 7399,Reds
 7400,Khakis
-7401,Khakis
+7401,Turquoises
 7402,Greys
 7403,Khakis
 7404,Khakis
@@ -7451,7 +7451,7 @@ IdentityCard_Num,PredictVote
 7450,Oranges
 7451,Turquoises
 7452,Pinks
-7453,Oranges
+7453,Yellows
 7454,Browns
 7455,Turquoises
 7456,Turquoises
@@ -7534,12 +7534,12 @@ IdentityCard_Num,PredictVote
 7533,Blues
 7534,Turquoises
 7535,Oranges
-7536,Turquoises
+7536,Pinks
 7537,Browns
-7538,Violets
+7538,Purples
 7539,Greens
 7540,Greens
-7541,Greys
+7541,Turquoises
 7542,Violets
 7543,Greys
 7544,Khakis
@@ -7668,7 +7668,7 @@ IdentityCard_Num,PredictVote
 7667,Turquoises
 7668,Khakis
 7669,Browns
-7670,Oranges
+7670,Yellows
 7671,Oranges
 7672,Oranges
 7673,Turquoises
@@ -7686,7 +7686,7 @@ IdentityCard_Num,PredictVote
 7685,Yellows
 7686,Browns
 7687,Oranges
-7688,Browns
+7688,Yellows
 7689,Browns
 7690,Reds
 7691,Khakis
@@ -7745,7 +7745,7 @@ IdentityCard_Num,PredictVote
 7744,Khakis
 7745,Browns
 7746,Browns
-7747,Khakis
+7747,Pinks
 7748,Browns
 7749,Turquoises
 7750,Yellows
@@ -7758,7 +7758,7 @@ IdentityCard_Num,PredictVote
 7757,Turquoises
 7758,Reds
 7759,Turquoises
-7760,Oranges
+7760,Greens
 7761,Khakis
 7762,Browns
 7763,Reds
@@ -7804,7 +7804,7 @@ IdentityCard_Num,PredictVote
 7803,Whites
 7804,Turquoises
 7805,Browns
-7806,Greens
+7806,Yellows
 7807,Blues
 7808,Turquoises
 7809,Turquoises
@@ -7894,7 +7894,7 @@ IdentityCard_Num,PredictVote
 7893,Khakis
 7894,Turquoises
 7895,Turquoises
-7896,Greys
+7896,Khakis
 7897,Turquoises
 7898,Khakis
 7899,Blues
@@ -7933,7 +7933,7 @@ IdentityCard_Num,PredictVote
 7932,Turquoises
 7933,Whites
 7934,Browns
-7935,Whites
+7935,Turquoises
 7936,Khakis
 7937,Khakis
 7938,Reds
@@ -7988,7 +7988,7 @@ IdentityCard_Num,PredictVote
 7987,Khakis
 7988,Khakis
 7989,Browns
-7990,Violets
+7990,Browns
 7991,Whites
 7992,Turquoises
 7993,Reds
@@ -8036,7 +8036,7 @@ IdentityCard_Num,PredictVote
 8035,Browns
 8036,Turquoises
 8037,Browns
-8038,Violets
+8038,Browns
 8039,Whites
 8040,Browns
 8041,Browns
@@ -8064,14 +8064,14 @@ IdentityCard_Num,PredictVote
 8063,Browns
 8064,Reds
 8065,Oranges
-8066,Greys
+8066,Pinks
 8067,Turquoises
 8068,Browns
 8069,Browns
 8070,Browns
 8071,Reds
 8072,Turquoises
-8073,Khakis
+8073,Whites
 8074,Turquoises
 8075,Oranges
 8076,Greys
@@ -8213,7 +8213,7 @@ IdentityCard_Num,PredictVote
 8212,Blues
 8213,Turquoises
 8214,Turquoises
-8215,Purples
+8215,Browns
 8216,Whites
 8217,Browns
 8218,Oranges
@@ -8245,7 +8245,7 @@ IdentityCard_Num,PredictVote
 8244,Greys
 8245,Browns
 8246,Blues
-8247,Pinks
+8247,Khakis
 8248,Yellows
 8249,Khakis
 8250,Browns
@@ -8253,7 +8253,7 @@ IdentityCard_Num,PredictVote
 8252,Browns
 8253,Greens
 8254,Browns
-8255,Turquoises
+8255,Whites
 8256,Browns
 8257,Greys
 8258,Khakis
@@ -8336,7 +8336,7 @@ IdentityCard_Num,PredictVote
 8335,Pinks
 8336,Browns
 8337,Browns
-8338,Reds
+8338,Yellows
 8339,Browns
 8340,Turquoises
 8341,Oranges
@@ -8504,7 +8504,7 @@ IdentityCard_Num,PredictVote
 8503,Browns
 8504,Turquoises
 8505,Turquoises
-8506,Whites
+8506,Khakis
 8507,Greens
 8508,Browns
 8509,Greys
@@ -8556,20 +8556,20 @@ IdentityCard_Num,PredictVote
 8555,Turquoises
 8556,Khakis
 8557,Turquoises
-8558,Purples
+8558,Browns
 8559,Turquoises
 8560,Khakis
 8561,Khakis
 8562,Browns
 8563,Greys
-8564,Oranges
+8564,Reds
 8565,Greens
 8566,Blues
 8567,Khakis
 8568,Blues
 8569,Browns
 8570,Browns
-8571,Yellows
+8571,Browns
 8572,Khakis
 8573,Greys
 8574,Turquoises
@@ -8658,7 +8658,7 @@ IdentityCard_Num,PredictVote
 8657,Browns
 8658,Browns
 8659,Khakis
-8660,Browns
+8660,Purples
 8661,Greens
 8662,Khakis
 8663,Khakis
@@ -8697,10 +8697,10 @@ IdentityCard_Num,PredictVote
 8696,Turquoises
 8697,Turquoises
 8698,Turquoises
-8699,Browns
+8699,Purples
 8700,Pinks
 8701,Reds
-8702,Whites
+8702,Turquoises
 8703,Browns
 8704,Browns
 8705,Turquoises
@@ -8743,7 +8743,7 @@ IdentityCard_Num,PredictVote
 8742,Turquoises
 8743,Browns
 8744,Oranges
-8745,Purples
+8745,Yellows
 8746,Browns
 8747,Blues
 8748,Blues
@@ -8801,7 +8801,7 @@ IdentityCard_Num,PredictVote
 8800,Whites
 8801,Browns
 8802,Khakis
-8803,Whites
+8803,Khakis
 8804,Turquoises
 8805,Greens
 8806,Khakis
@@ -8931,7 +8931,7 @@ IdentityCard_Num,PredictVote
 8930,Browns
 8931,Reds
 8932,Greens
-8933,Browns
+8933,Purples
 8934,Whites
 8935,Reds
 8936,Greys
@@ -8966,7 +8966,7 @@ IdentityCard_Num,PredictVote
 8965,Turquoises
 8966,Turquoises
 8967,Reds
-8968,Whites
+8968,Khakis
 8969,Blues
 8970,Yellows
 8971,Pinks
@@ -8977,7 +8977,7 @@ IdentityCard_Num,PredictVote
 8976,Pinks
 8977,Browns
 8978,Reds
-8979,Whites
+8979,Khakis
 8980,Purples
 8981,Browns
 8982,Khakis
@@ -9006,7 +9006,7 @@ IdentityCard_Num,PredictVote
 9005,Greens
 9006,Reds
 9007,Whites
-9008,Browns
+9008,Purples
 9009,Khakis
 9010,Greys
 9011,Browns
@@ -9052,7 +9052,7 @@ IdentityCard_Num,PredictVote
 9051,Greys
 9052,Khakis
 9053,Khakis
-9054,Purples
+9054,Violets
 9055,Reds
 9056,Khakis
 9057,Khakis
@@ -9080,7 +9080,7 @@ IdentityCard_Num,PredictVote
 9079,Turquoises
 9080,Greys
 9081,Browns
-9082,Greens
+9082,Turquoises
 9083,Browns
 9084,Reds
 9085,Khakis
@@ -9185,7 +9185,7 @@ IdentityCard_Num,PredictVote
 9184,Turquoises
 9185,Khakis
 9186,Turquoises
-9187,Violets
+9187,Purples
 9188,Oranges
 9189,Turquoises
 9190,Yellows
@@ -9201,7 +9201,7 @@ IdentityCard_Num,PredictVote
 9200,Khakis
 9201,Oranges
 9202,Greys
-9203,Reds
+9203,Oranges
 9204,Browns
 9205,Purples
 9206,Blues
@@ -9290,7 +9290,7 @@ IdentityCard_Num,PredictVote
 9289,Turquoises
 9290,Browns
 9291,Browns
-9292,Oranges
+9292,Reds
 9293,Oranges
 9294,Greys
 9295,Pinks
@@ -9338,7 +9338,7 @@ IdentityCard_Num,PredictVote
 9337,Turquoises
 9338,Browns
 9339,Turquoises
-9340,Whites
+9340,Khakis
 9341,Khakis
 9342,Yellows
 9343,Greens
@@ -9458,7 +9458,7 @@ IdentityCard_Num,PredictVote
 9457,Turquoises
 9458,Browns
 9459,Reds
-9460,Browns
+9460,Yellows
 9461,Oranges
 9462,Browns
 9463,Turquoises
@@ -9504,7 +9504,7 @@ IdentityCard_Num,PredictVote
 9503,Purples
 9504,Blues
 9505,Khakis
-9506,Violets
+9506,Purples
 9507,Blues
 9508,Violets
 9509,Reds
@@ -9536,7 +9536,7 @@ IdentityCard_Num,PredictVote
 9535,Browns
 9536,Browns
 9537,Browns
-9538,Khakis
+9538,Turquoises
 9539,Browns
 9540,Turquoises
 9541,Oranges
@@ -9581,7 +9581,7 @@ IdentityCard_Num,PredictVote
 9580,Blues
 9581,Browns
 9582,Browns
-9583,Blues
+9583,Yellows
 9584,Purples
 9585,Khakis
 9586,Khakis
@@ -9712,7 +9712,7 @@ IdentityCard_Num,PredictVote
 9711,Turquoises
 9712,Browns
 9713,Browns
-9714,Violets
+9714,Browns
 9715,Browns
 9716,Whites
 9717,Greys
@@ -9745,7 +9745,7 @@ IdentityCard_Num,PredictVote
 9744,Turquoises
 9745,Turquoises
 9746,Browns
-9747,Turquoises
+9747,Greens
 9748,Khakis
 9749,Oranges
 9750,Reds
@@ -9809,7 +9809,7 @@ IdentityCard_Num,PredictVote
 9808,Browns
 9809,Browns
 9810,Khakis
-9811,Purples
+9811,Browns
 9812,Browns
 9813,Khakis
 9814,Greens
@@ -9851,7 +9851,7 @@ IdentityCard_Num,PredictVote
 9850,Browns
 9851,Browns
 9852,Yellows
-9853,Whites
+9853,Khakis
 9854,Greens
 9855,Blues
 9856,Khakis
@@ -9884,7 +9884,7 @@ IdentityCard_Num,PredictVote
 9883,Greys
 9884,Turquoises
 9885,Browns
-9886,Reds
+9886,Yellows
 9887,Blues
 9888,Khakis
 9889,Turquoises
@@ -9944,7 +9944,7 @@ IdentityCard_Num,PredictVote
 9943,Greys
 9944,Khakis
 9945,Reds
-9946,Browns
+9946,Purples
 9947,Blues
 9948,Reds
 9949,Khakis
@@ -9976,7 +9976,7 @@ IdentityCard_Num,PredictVote
 9975,Khakis
 9976,Khakis
 9977,Khakis
-9978,Khakis
+9978,Whites
 9979,Oranges
 9980,Purples
 9981,Browns

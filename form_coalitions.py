@@ -231,11 +231,11 @@ def which_group_is_bigger(two_group_labels_train, position, k):
 
 
 def get_clustering_coalition(x_test, x_train, x_validation, y_test, y_train, y_validation):
-    #print_variance_before_choose_coalition(x_train)
+    print_variance_before_choose_coalition(x_train)
     coalition_clustering = coalition_by_k_means_cluster(x_test, x_train, x_validation,
                                                         y_test, y_train, y_validation)
 
-    #print_variance_after_choose_coalition(coalition_clustering, x_train, y_train)
+    print_variance_after_choose_coalition(coalition_clustering, x_train, y_train)
 
 
 def get_strong_coalition(x_train, y_train, x_test, y_test):
